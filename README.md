@@ -10,7 +10,7 @@ GoogleHome-IFTTT-Beebotte-Server-GoogleHomeで質問に答えさせる。iksm_se
 チャンネルとトピック作る。
 
 ### IFTTの準備
-GoogleAssistantとWebhookで喋り掛けられたらBeebotteで作ったチャンネルにデータを投げる。後述の6種類のJSONをうまい具合にBeebotteに投げるように設定してください。
+GoogleAssistantとWebhookで喋り掛けられたらBeebotteで作ったチャンネルにデータを投げる。後述の6種類のJSONをうまい具合にBeebotteに投げるように設定してください。私はあほなのでAppletを6つ作った。
 
 #### Webhook
 各項目を以下のように設定
@@ -21,8 +21,6 @@ GoogleAssistantとWebhookで喋り掛けられたらBeebotteで作ったチャ�
 | Method | POST |
 | Content | application/json |
 | Body | うまい具合に下のどれかになるようにする。<br> {"data": {"cmd": "current"}} <br> {"data": {"cmd": "next"}} <br> {"data": {"cmd": "search", "rule": "area"}} <br> {"data": {"cmd": "search", "rule": "yagura"}} <br> {"data": {"cmd": "search", "rule": "hoko"}} <br> {"data": {"cmd": "search", "rule": "asari"}} |
-
-私はあほなのでAppletを6つ作った。
 
 ### Serverの準備
 
