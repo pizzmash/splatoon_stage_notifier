@@ -15,23 +15,14 @@ GoogleAssistantとWebhookで喋り掛けられたらBeebotteで作ったチャ�
 #### Webhook
 各項目を以下のように設定
 
-##### URL
-https\://api.beebotte.com/v1/data/publish/`CHANNEL_NAME`/`TOPIC`?token=`CHANNEL_TOKEN`
+| 項目 | 内容 |
+| - | - |
+| URL | https\://api.beebotte.com/v1/data/publish/`CHANNEL_NAME`/`TOPIC`?token=`CHANNEL_TOKEN` |
+| Method | POST |
+| Content | application/json |
+| Body | うまい具合に下のどれかになるようにする。<br> {"data": {"cmd": "current"}} <br> {"data": {"cmd": "next"}} <br> {"data": {"cmd": "search", "rule": "area"}} <br> {"data": {"cmd": "search", "rule": "yagura"}} <br> {"data": {"cmd": "search", "rule": "hoko"}} <br> {"data": {"cmd": "search", "rule": "asari"}} |
 
-##### Method
-POST
-
-##### Content
-application/json
-
-##### Body
-うまい具合に下のどれかになるようにする。
-- {"data": {"cmd": "current"}}
-- {"data": {"cmd": "next"}}
-- {"data": {"cmd": "search", "rule": "area"}}
-- {"data": {"cmd": "search", "rule": "yagura"}}
-- {"data": {"cmd": "search", "rule": "hoko"}}
-- {"data": {"cmd": "search", "rule": "asari"}}
+私はあほなのでAppletを6つ作った。
 
 ### Serverの準備
 
